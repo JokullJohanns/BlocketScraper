@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Blocket Spy</title>
+	<meta http-equiv="refresh" content="60">
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="static/style.css">
+	<script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+	<script src="static/script.js"></script>
+</head>
+<body>
+	<h2>Blocket Spy</h2>
+	<div id="list"></div>
+	{% for item in items %}
+		{% autoescape false %}
+    	<div class="item">
+        	<div class="title">{{ item.title}}</div>
+        	<div class="photo">{{ item.image}}</div>
+        	<div class="price">{{ item.price}}</div>
+        	<div class="rooms">{{ item.rooms}}</div>
+        	<div class="address">{{ item.address}}</div>
+        </div>
+        {% endautoescape %}
+    {% endfor %}
+
+	<audio id="sound" controls>
+  		<source  src="https://notificationsounds.com/message-tones/gets-in-the-way-520/download/mp3" type="audio/mpeg">
+	</audio>
+	
+</body>
+</html>

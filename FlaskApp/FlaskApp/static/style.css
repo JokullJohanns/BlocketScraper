@@ -1,0 +1,46 @@
+body {
+	background-color: #eee;
+}
+
+#list {
+	display: block;
+	width: 100%;
+}
+
+.item {
+	float: left;
+    border: 2px solid #ddd;
+    margin: 1%;
+    height:200px;    
+    width: 23%;
+    position: relative;
+    padding-left: 10px;
+    background-color: #fff; 
+}
+.item:hover {
+	background-color: #ddd;
+}
+
+.item .title {
+	color: #000;
+	line-height: 20px;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.photo {
+	position: absolute;
+	right: 10px;
+	top: 20px;
+}
+.photo a {
+	width: 180px;
+	height: 150px;
+	display: inline-block;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.item.new {
+	border: 2px solid green;
+}
