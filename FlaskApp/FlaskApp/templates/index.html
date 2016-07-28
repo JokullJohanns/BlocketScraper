@@ -12,15 +12,13 @@
 	<h2>Blocket Spy</h2>
 	<div id="list"></div>
 	{% for item in items %}
-		{% autoescape false %}
     	<div class="item">
-        	<div class="title">{{ item.title}}</div>
-        	<div class="photo">{{ item.image}}</div>
+        	<div class="title"><a href="{{ item.link}}"> {{ item.title}}</a></div>
+        	<div class="photo"><a href="{{ item.link}}"><img src="{{ item.image}}"></a></div>
         	<div class="price">{{ item.price}}</div>
         	<div class="rooms">{{ item.rooms}}</div>
         	<div class="address">{{ item.address}}</div>
         </div>
-        {% endautoescape %}
     {% endfor %}
 
 	<audio id="sound" controls>
